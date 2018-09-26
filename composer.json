@@ -1,0 +1,12 @@
+{
+    "name": "student/json",
+    "description": "no desc",
+    "type": "project",
+    "require": {},
+	"autoload":{
+	"classmap":[
+	"src/controller.php", "src/cmp/", "src/cmp/req", "src/cmp/comm"
+	]
+	}
+}
+

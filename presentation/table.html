@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="eng">
+<head>
+<meta charset="utf-8">
+<title>Table</title>
+<link href="presentation/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<? if(empty($table)): ?>
+<div  id="thank">
+<h1>Nobody here but us chickens</h1>
+</div>
+<? else: ?>
+<div id="table">
+<? if(!empty(TableBuilder::$search)): ?>
+<h2>Search results for "<?= htmlspecialchars(TableBuilder::$search) ?>":</h2>
+<? endif ?>
+<table>
+<tr>
+<th>First name</th>
+<th>Last name</th>
+<th>Gender</th>
+<th>Group</th>
+<th>Points</th>
+<tr>
+<? foreach($table as $row): ?>
+<tr>
+<? foreach(array_pop($row) as $value): ?>
+<td>
+<?=$value ?>
+</td>
+<? endforeach ?>
+</tr>
+<? endforeach ?>
+</table>
+<? if((count($pages) > 1) and empty(TableBuilder::$search)): ?>
+<div id="pages">
+<? foreach($pages as $value): ?>
+<a href="<?=htmlspecialchars(Routs::getLinkForPage($value)) ?>">[<?=htmlspecialchars($value) ?>]</a>
+<? endforeach ?>
+</div>
+<? endif ?>
+</div>
+<? endif ?>
+
+</body>
+</html>
