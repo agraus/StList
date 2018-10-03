@@ -11,9 +11,9 @@ class RegistrationCommand extends Command
 			default: $warning = $check ;
 		}
 
-		include_once(__DIR__ . "/../../../presentation/header.html") ;
-		include_once(__DIR__ . "/../../../presentation/form.html") ;
-		include_once(__DIR__ . "/../../../presentation/footer.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/header.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/form.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/footer.html") ;
 
 	}
 }

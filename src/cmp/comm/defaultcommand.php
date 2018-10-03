@@ -7,8 +7,8 @@ class DefaultCommand extends Command
 		$pages = TableBuilder::getPages() ;
 		$table = TableBuilder::run() ;
 		//echo $request -> getFeedbackString() ;
-		include_once(__DIR__ . "/../../../presentation/header.html") ;
-		include_once(__DIR__ . "/../../../presentation/table.html") ;
-		include_once(__DIR__ . "/../../../presentation/footer.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/header.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/table.html") ;
+		include_once(__DIR__ . "/../../../public/presentation/footer.html") ;
 	}
 }
